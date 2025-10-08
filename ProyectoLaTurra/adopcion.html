@@ -9,12 +9,16 @@
 
 <body>
 
+  <!-- PRESENTACIÓN -->
   <section id="presentacion">
     <h1>Centro de Adopción de Animales "La Turra"</h1>
 
+    <!--IMAGEN CON ENLACE A LA PÁGINA-->
     <a href="https://refuxio.gal" target="_blank" rel="noopener noreferrer"><img src="img/logo-bando-color-1.png"
-        title="O Refuxio de Bando" alt="Logo del Refuxio de Bando" width="200" /></a>
+        title="O Refuxio de Bando" alt="Logo O Refuxio de Bando" width="200"/>
+    </a>
 
+    <!--TITULO CON ENLACE A LA PÁGINA, DESCRIPCIÓN Y LISTA-->
     <h2>
       <a href="http://refuxio.gal" target="_blank" rel="noopener noreferrer" style="color: inherit">O Refuxio de
         Bando:</a>
@@ -25,7 +29,7 @@
       objectivo principal conseguir el <strong>bienestar animal</strong>, así
       como la <em>convivencia harmónica</em> con el ser humano. Con ello, este
       centro de adopción alberga varios tipos de animales, aunque principalmente
-      son animales de compañía:
+      son <strong><em>animales de compañía</em></strong>:
     </p>
 
     <ul title="Animales disponibles para adopción">
@@ -35,6 +39,7 @@
     </ul>
   </section>
 
+  <!--TABLA ADOPCIONES RECIENTES-->
   <section id="adopciones-recientes">
 
     <h3>Tabla de adopciones recientes</h3>
@@ -78,20 +83,26 @@
       </tr>
     </table>
   </section>
+
+  <!--FORMULARIO DE ADOPCIÓN-->
   <section id="adopcion">
     <h3>Solicitud de adopción</h3>
 
     <form action="">
+      
+      <!--NOMBRE Y APELLIDOS-->
       <label for="name">Nombre y Apellidos:</label>
       <input type="text" id="name" name="name" required />
 
       <br><br>
 
+      <!--CORREO-->
       <label for="email">Correo Electrónico:</label>
       <input type="email" id="email" name="email" placeholder="prueba@prueba.pr" />
 
       <br><br>
 
+      <!--ANIMAL DESEADO-->
       <label for="animal">Animal deseado:</label>
       <select id="animal" name="animal" required>
         <option value="" disabled selected>Selecciona una opción</option>
@@ -100,11 +111,13 @@
         <option value="huron">Hurón</option>
       </select>
 
+      <!--FECHA NACIMIENTO-->
       <label for="nacimiento">Fecha de nacimiento</label>
       <input type="date" id="nacimiento" name="nacimiento" />
 
       <br><br>
 
+      <!--BOTÓN ENVIAR-->
       <button type="submit">¡Adoptar!</button>
 
     </form>
