@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepinillos Manolo</title>
+</head>
+
+<body>
+
+    <!-- ENCABEZADOS Y TEXTO -->
+    <h1>Pepinillos Manolo</h1>
+
+    <h2>Formulario de pedidos</h2>
+
+    <p>Utilice este formulario para encargar nuestros pepinillos artesanales: seleccione variedad y tamaño, cubra los
+        diversos campos de contacto que se muestran. Ofrecemos envíos rápidos y opciones de recogida local. Para
+        cualquier duda, contacte con nosotros!</p>
+
+    <!-- IMAGEN Y ENLACE -->
+    <a href="https://www.google.com/search?q=compra+pepinillos&rlz=1C2ASUM_enES1046ES1046&sca_esv=f4f4d625b74d76fe&sxsrf=AE3TifNqzL-E6gN_DKm3Q3aIpbYJruZVkg%3A1761824508332&source=hp&ei=_E4DaZG-Ee7VkdUPs-nA2AI&iflsig=AOw8s4IAAAAAaQNdDAhsHjloYqpLdI85e8sUkMLoLbT_&oq=&gs_lp=Egdnd3Mtd2l6IgAqAggAMgcQIxgnGOoCMg0QIxjwBRgnGMkCGOoCMg0QIxjwBRgnGMkCGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCSI4FUABYAHABeACQAQCYAQCgAQCqAQC4AQHIAQCYAgGgAgioAgqYAwjxBbBFmolSD5qVkgcBMaAHALIHALgHAMIHAzItMcgHBg&sclient=gws-wiz"
+        target="_blank">
+        <img src="img/pepinillos.jpg" alt="Foto pepinillos" width="400">
+
+        <p>Visite nuestra web</p>
+
+    </a>
+
+    <!-- LISTA CON TIPOS DE PEPINO -->
+    <h3>Variedades de pepinillos</h3>
+    <ul>
+        <li>Pepino persa</li>
+        <li>Pepino kirby</li>
+        <li>Pepino de encurtir</li>
+        <li>Pepino en vinagre</li>
+        <li>Pepino dulce</li>
+        <li>Pepino al eneldo</li>
+    </ul>
+
+    <!-- TABLA DE PEDIDOS RECIENTES -->
+    <h3>Pedidos recientes</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Número pedido</th>
+                <th>Fecha</th>
+                <th>Importe</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>001</td>
+                <td>2024-01-15</td>
+                <td>25.00 €</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>2024-01-20</td>
+                <td>40.00 €</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>2024-01-25</td>
+                <td>15.00 €</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>80.00 €</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- FORMULARIO DE PEDIDO -->
+    <h3>Realice su pedido</h3>
+    <form>
+
+        <fieldset>
+            <legend>Datos del Cliente</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <p></p>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <p></p>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 123 45 67 89">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalles del Pedido</legend>
+
+            <label for="cantidad">Cantidad de productos:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="20" required>
+
+            <p></p>
+
+            <div>
+                <label for="variedad">Tipo de pepinillos:</label>
+                <select id="variedad" name="variedad" required>
+                    <option value="porDefecto" selected disabled>Selecciona un tipo</option>
+
+                    <optgroup label="Según el tipo de pepino">
+                        <option value="persa">Pepino Persa</option>
+                        <option value="kirby">Pepino Kirby</option>
+                        <option value="encurtir">Pepino de Encurtir</option>
+                    </optgroup>
+
+                    <optgroup label="Según el tipo de preparación">
+                        <option value="vinagre">Pepino en vinagre</option>
+                        <option value="dulce">Pepino dulce</option>
+                        <option value="eneldo">Pepino al eneldo</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <p></p>
+
+            <div>
+                <label for="observaciones">Observaciones:</label>
+                <p></p>
+                <textarea name="observaciones" id="observaciones" placeholder="Escribir aquí" cols="40"
+                    rows="5"></textarea>
+            </div>
+
+            <p></p>
+
+            <label for="archivo">Adjunta aquí tu factura/imagen:</label>
+            <input type="file" id="archivo" name="archivo" accept=".jpg, .pdf" multiple>
+
+            <p></p>
+
+            <label for="satisfaccion">Opinión estimada del proceso?</label>
+            <p></p>
+            <input type="range" min="0" max="100" value="50">
+        </fieldset>
+
+        <input type="submit" value="Confirmar Pedido" id="enviar" name="enviar" style="margin: 10px 15px 0 2px;">
+        <input type="reset" value="Volver a empezar" id="borrar" name="borrar">
+
+    </form>
+
+
+
+</body>
+
+</html>
