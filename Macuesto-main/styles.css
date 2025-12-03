@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: azure;
+  color: #333;
+  padding: 20px 40px;
+}
+
+header {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.contacto {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+
+.trozo {
+  color: blue;
+  font-weight: bold;
+}
+
+.campo {
+  margin-bottom: 7px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.campo span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  transition: 0.3s linear;
+}
+
+.campo input:hover,
+.campo textarea:hover {
+  border: 3px solid red;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: red;
+  outline: none;
+  box-shadow: 0px 0px 12px orange;
+}
+
+.btn {
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 15px 10px 5px 0;
+  transition: 0.3s linear;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.btn-enviar {
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.btn-borrar {
+  background-color: red;
+  color: #fff;
+}
