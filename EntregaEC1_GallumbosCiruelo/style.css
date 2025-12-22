@@ -1,0 +1,46 @@
+/*VARIABLES*/
+/*
+fuentes
+Títulos: Montserrat (fuerte, claro)
+
+Cuerpo de texto: Roboto (legible, cómodo)
+
+Acentos / frases clave: Playfair Display (elegancia)
+*/
+
+:root {
+    --title-text-color: #1F2937; /*Header, footer, títulos grandes*/
+    --important-text-color: #F59E0B; /*Palabras clave en el header, iconos de ventajas, highlights*/
+    --primary-bg-color: #F3F4F6; /*Fondo de secciones principales*/
+    --secondary-bg-color: #F9F7F3; /*Fondo secundario*/
+    --primary-text-color: #111827; /*Textos generales*/
+    --alternative-text-color: #2563EB; /*Botones, enlaces principales, llamadas a la acción*/
+    --secondary-text-color: #D97706; /*Hover de botones o elementos secundarios destacados*/
+    
+}
+
+/*RESET CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+img {
+  width: 100px;
+}
+
+/*ESTILOS GENERALES*/
