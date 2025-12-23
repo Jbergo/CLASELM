@@ -1,22 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*VARIABLES*/
-/*
-fuentes
-Títulos: Montserrat (fuerte, claro)
-
-Cuerpo de texto: Roboto (legible, cómodo)
-
-Acentos / frases clave: Playfair Display (elegancia)
-*/
-
 :root {
-    --title-text-color: #1F2937; /*Header, footer, títulos grandes*/
-    --important-text-color: #F59E0B; /*Palabras clave en el header, iconos de ventajas, highlights*/
-    --primary-bg-color: #F3F4F6; /*Fondo de secciones principales*/
-    --secondary-bg-color: #F9F7F3; /*Fondo secundario*/
-    --primary-text-color: #111827; /*Textos generales*/
-    --alternative-text-color: #2563EB; /*Botones, enlaces principales, llamadas a la acción*/
-    --secondary-text-color: #D97706; /*Hover de botones o elementos secundarios destacados*/
-    
+  --primary-bg-color: #f3f4f6; /*Fondo de secciones principales*/
+  --secondary-bg-color: #f9f7f3; /*Fondo secundario*/
+  --title-text-color: #1f2937; /*Header, footer, títulos grandes*/
+  --important-text-color: #f59e0b; /*Palabras clave*/
+  --primary-text-color: #111827; /*Textos generales*/
+  --alternative-text-color: #2563eb; /*Botones, enlaces principales*/
+  --secondary-text-color: #d97706; /*Hover de botones*/
+  --primary-text-size: 16px; /*Texto principal*/
+  --secondary-text-size: 14px; /*Texto secundario*/
+  --title1-text-size: 36px; /*Títulos*/
+  --title2-text-size: 28px; /*Títulos section*/
+  --title3-text-size: 20px; /*Subtitulos*/
+  --title-font: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif; /*Títulos*/
+  --primary-font: "Roboto", "Segoe UI", Arial, Helvetica, sans-serif; /*Cuerpo*/
+  --secondary-font: "Playfair Display", "Georgia", "Times New Roman", serif; /*Frases clave*/
+  --padding: 20px 30px;
 }
 
 /*RESET CSS*/
@@ -44,3 +45,269 @@ img {
 }
 
 /*ESTILOS GENERALES*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  color: var(--primary-text-color);
+  font-size: var(--primary-text-size);
+  font-family: var(--primary-font);
+}
+
+header,
+section {
+  background-color: var(--primary-bg-color);
+  padding: var(--padding);
+}
+
+main,
+aside,
+footer {
+  background-color: var(--secondary-bg-color);
+  padding: var(--padding);
+}
+
+h1,
+h2,
+h3,
+footer {
+  color: var(--title-text-color);
+}
+
+h1 {
+  font-size: var(--title1-text-size);
+  font-family: var(--title-font);
+}
+
+h2 {
+  font-size: var(--title2-text-size);
+  font-family: var(--title-font);
+  padding-bottom: 7px;
+}
+
+h3 {
+  font-size: var(--title3-text-size);
+  font-family: var(--title-font);
+  padding-bottom: 7px;
+}
+
+/*HEADER*/
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 70px;
+}
+
+header div,
+header img {
+  flex-grow: 1;
+}
+
+header blockquote {
+  font-family: var(--secondary-font);
+  font-size: var(--title3-text-size);
+}
+
+header span {
+  font-family: var(--secondary-font);
+  font-size: var(--title3-text-size);
+  color: var(--important-text-color);
+  font-weight: bold;
+}
+
+/*MENU NAVEGACION*/
+header > nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+header a {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-family: var(--title-font);
+}
+
+header li:hover > a {
+  color: var(--secondary-text-color);
+  transition: all 0.2s linear;
+}
+
+/*MAIN*/
+main > p {
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+/*PRODUCTOS*/
+#productos > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+#productos article {
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0px 0px 5px 0px #1f2937;
+}
+
+#productos article:hover {
+  background-color: var(--secondary-bg-color);
+  transition: all 0.5s linear;
+}
+
+#productos article > p {
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+#productos article > p > span {
+  font-family: var(--secondary-font);
+  font-size: var(--title3-text-size);
+}
+
+/*COLECCIONES*/
+#colecciones > article > p {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+#colecciones > article > p::before {
+  content: "→";
+}
+
+#colecciones > article > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#colecciones figure:hover figcaption {
+  color: var(--important-text-color);
+  transition: all 0.3s linear;
+}
+
+#colecciones figcaption {
+  text-align: center;
+}
+
+/*ASIDE*/
+
+aside h3 {
+  text-align: center;
+  padding-bottom: 5px;
+  letter-spacing: 1.5px;
+}
+
+#separador {
+  margin: 0 auto;
+  border-top: 2px solid var(--important-text-color);
+  width: 20%;
+  padding: 6px 0;
+}
+
+aside li {
+  font-size: var(--title3-text-size);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+aside li::before {
+  content: "✔";
+  margin-right: 5px;
+}
+
+/*FORMULARIO CONTACTO*/
+#contacto > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#contacto > form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+  margin-bottom: 10px;
+}
+
+#contacto input:focus,
+#contacto select:focus,
+#contacto textarea:focus {
+  border-color: var(--important-text-color);
+  outline: none;
+}
+
+#contacto textarea {
+  width: 250px;
+  height: 100px;
+}
+
+#contacto button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #1f2937;
+  padding: 10px 25px;
+}
+
+#contacto button:hover {
+  background-color: var(--important-text-color);
+  box-shadow: 0px 0px 5px 0px #1f2937;
+  border: none;
+  transition: all 0.5s linear;
+}
+
+/*FOOTER*/
+footer {
+  text-align: center;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1165px) {
+  header {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header h1,
+  header blockquote {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h2,
+  h3,
+  main > p {
+    text-align: center;
+  }
+
+  header > nav {
+    justify-content: center;
+  }
+
+  #colecciones h3 {
+    margin-top: 20px;
+  }
+
+  #colecciones > article > p {
+    margin-left: 0;
+    text-align: center;
+  }
+}
