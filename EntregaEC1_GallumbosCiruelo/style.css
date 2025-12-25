@@ -18,6 +18,8 @@
   --primary-font: "Roboto", "Segoe UI", Arial, Helvetica, sans-serif; /*Cuerpo*/
   --secondary-font: "Playfair Display", "Georgia", "Times New Roman", serif; /*Frases clave*/
   --padding: 20px 30px;
+  --padding-cards: 20px;
+  --shadow: 0px 0px 5px 0px #1f2937;
 }
 
 /*RESET CSS*/
@@ -152,16 +154,22 @@ main > p {
 }
 
 #productos article {
-  padding: 20px;
+  padding: var(--padding-cards);
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  box-shadow: 0px 0px 5px 0px #1f2937;
+  box-shadow: var(--shadow);
 }
 
 #productos article:hover {
   background-color: var(--secondary-bg-color);
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+#productos article:hover .imgProducts {
+  box-shadow: var(--shadow);
   transition: all 0.5s linear;
 }
 
@@ -173,6 +181,11 @@ main > p {
 #productos article > p > span {
   font-family: var(--secondary-font);
   font-size: var(--title3-text-size);
+}
+
+.imgProducts {
+  width: 80%;
+  border-radius: 5px;
 }
 
 /*COLECCIONES*/
@@ -199,9 +212,34 @@ main > p {
 
 #colecciones figcaption {
   text-align: center;
+  font-family: var(--secondary-font);
+  font-size: var(--secondary-text-size);
+  font-weight: 500;
+  padding: 15px 0;
+}
+
+#colecciones figure {
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  width: auto;
+  height: 200px;
+}
+
+.imgCollection {
+  border-radius: 5px 5px 0 0;
+  width: 200px;
+}
+
+#colecciones figure:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 /*ASIDE*/
+aside {
+  padding: 70px;
+}
 
 aside h3 {
   text-align: center;
